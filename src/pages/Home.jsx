@@ -26,8 +26,8 @@ function Home() {
             </span>
           ))}
         </p>
-      </section>  {/* ☆ TODO add api */}
-      <p>{`next word in ${hours}:${minutes}:${seconds}`}</p> {/* ☆ TODO prettify countdown */}
+      </section>  {/* ☆ TODO add api to get word def */}
+      <p>{`next word in ${hours} hours, ${minutes} minutes, and ${seconds} seconds`}</p> {/* ☆ TODO prettify countdown */}
     </div>
   );
 }

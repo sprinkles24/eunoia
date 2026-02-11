@@ -33,7 +33,7 @@ function useCountdown() {
     return () => clearInterval(timer);
   }, []);
 
-  return {
+  return { // ★ FIXME the things keep going into single digits (or i js keep the html bit in word format instead of XX:XX:XX format)
     hours: timeLeft.hours,
     minutes: timeLeft.minutes,
     seconds: timeLeft.seconds,
