@@ -63,12 +63,13 @@ nav {
   align-items: center;
   padding: 2vh 4vh;
   background: var(--secondary);
-  border-bottom: 0.1vh solid var(--foreground);
+  /* border-bottom: 0.1vh solid var(--foreground); */
+  box-shadow: 0vh -2.36767vh 3vh 2vh var(--wine);  /* ✧ slight shadow underneath navigation bar ✧ */
   font-size: 3vh;
 }
 
 .nav-links a {
-  margin-right: 1.5vh;
+  margin-left: 2vh;
   color: var(--foreground);
   text-decoration: none;
 }
@@ -89,7 +90,7 @@ nav {
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  text-decoration: var(--wine) overline;
 }
 
 main {
@@ -131,11 +132,11 @@ main {
 @keyframes splice-in {
   from {
     opacity: 0;
-    transform: translateY(-0.5em);
+    transform: translateX(-0.5em);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
