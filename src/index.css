@@ -97,18 +97,40 @@ main {
   padding: 4vh 3vh;
 }
 
+/* ✧ footer css ✧ */
+footer {
+  margin-top: 8vh;
+  padding: 3.5vh 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9vh;
+  text-align: center;
+  font-size: 1.65vh;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.04vh;
+  background: var(--lightest);
+}
+
+footer::before {
+  content: "";
+  width: 8vh;
+  height: 0.35vh;
+  border-radius: 999vh;
+  background: color-mix(in srgb, var(--medium) 65%, var(--light) 35%);
+}
+
 /* ✧ home page css ✧ */
 .home .intro {
   text-align: center;
   padding: 6vh 2vh;
 }
 
-.home .intro h1 {
+.home .intro h2 {
   font-size: 5vh;
-  margin-bottom: 3vh;
   font-weight: 600;
   color: var(--dark);
-  text-transform: lowercase;
 }
 
 .home .magic-word { /* ✧ word of day ✧ */
@@ -120,7 +142,7 @@ main {
 
 .home .magic-word-char {   /* per character of word of day */
   display: inline-block;
-  background: linear-gradient(135deg, var(--dark) 20%, var(--medium) 50%, var(--darkest) 90%);
+  background: linear-gradient(135deg, var(--darkest) 20%, var(--light) 50%, var(--darkest) 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -140,11 +162,77 @@ main {
   }
 }
 
-/* ✧ about page css ✧ */
-.about .intro {
+/* ✧ home slogan headings ✧ */
+.home .slogan {
+  max-width: 140vh;
+  margin: 0 auto;
   text-align: center;
-  padding: 3vh 1vh;
+  padding: 1vh 2vh 3vh;
 }
+
+.home .slogan h1 {
+  font-size: clamp(3.2vh, 6vh, 6.4vh);
+  line-height: 1.1;
+  margin-bottom: 1.8vh;
+  letter-spacing: 0.08vh;
+  color: var(--darkest);
+  text-shadow: 0 0.2vh 0 var(--light);
+}
+
+.home .slogan h2 {
+  max-width: 100vh;
+  margin: 0 auto 2.2vh;
+  font-size: clamp(1.8vh, 2.6vh, 2.9vh);
+  line-height: 1.7;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--darkest) 85%, var(--dark) 15%);
+}
+
+/* ✧ paragraph text (home + wotd) ✧ */
+.home .slogan p,
+.home .wotd-countdown {
+  align-items: center;
+  width: fit-content;
+  margin: 1.8vh auto 0;
+  padding: 0.85vh 1.8vh;
+  border: 0.12vh solid color-mix(in srgb, var(--dark) 35%, var(--light) 65%);
+  border-radius: 999vh;
+  background: color-mix(in srgb, var(--lightest) 88%, var(--light) 12%);
+  font-size: clamp(1.7vh, 2vh, 2.2vh);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ✧ wotd definition card ✧ */
+.home .definition {
+  max-width: 110vh;
+  margin: 2.7vh auto 0.9vh;
+  padding: clamp(1.8vh, 3vh, 3.6vh);
+  border: 0.12vh solid color-mix(in srgb, var(--dark) 40%, var(--light) 60%);
+  border-radius: 1.8vh;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--lightest) 90%, var(--light) 10%),
+    color-mix(in srgb, var(--lightest) 84%, var(--light) 16%)
+  );
+  box-shadow: 0 1.2vh 3.2vh -2vh var(--darkest);
+}
+
+.home .definition h2 {
+  font-size: clamp(2.2vh, 3vh, 3.6vh);
+  margin-bottom: 1.35vh;
+  letter-spacing: 0.1vh;
+  text-transform: lowercase;
+  color: var(--dark);
+}
+
+.home .definition p {
+  font-size: clamp(1.8vh, 2.2vh, 2.4vh);
+  line-height: 1.75;
+  color: var(--darkest);
+}
+
+/* ✧ about page css + home intro h1 ✧ */
 
 .about .intro h1, 
 .home .intro h1 {
@@ -156,12 +244,27 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.about h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 5vh;
 }
 
 .about .intro p {
-  font-size: 5vh;
+    display: flex;
+  justify-content: center;
+
+  font-size: 3vh;
   color: var(--dark);
 }
+
+
+
+
 
 /* ✧ features = the little cards in the about page ✧ */
 
@@ -177,19 +280,9 @@ main {
 
 .about .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2vh;
-}
-
-.about .feature-card {
-  padding: 5vh 3vh;
-  background: var(--light);
-  border-radius: 8px;
-  text-align: center;
-}
-
-.about .feature-card:hover {
-  background: var(--medium);
+  flex: center;
+  gap: 7vh;
+  padding: 5vh 20vh;
 }
 
 @theme inline {

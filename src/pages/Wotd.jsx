@@ -25,10 +25,10 @@ function Wotd() {
   return (
     <div className="home">
       <section className="intro">
-        <h1>word of the day</h1>
+        <h2>word of the day</h2>
         <p className="magic-word">
           {magicWord.split('').map((char, i) => (                           // animation for word on load (twin did u see the 67 hehe)
-            <span key={i} className="magic-word-char" style={{ animationDelay: `${i * 0.0267}s` }}> 
+            <span key={i} className="magic-word-char" style={{ animationDelay: `${i * 0.167}s` }}> 
               {
                 char // prints out each character indivually (humanism core)
               } 
@@ -39,8 +39,10 @@ function Wotd() {
       <section className="definition">
         <h2>definition</h2>
         <p>{definition}</p> 
+        
       </section>
-      <p>{`next word in ${hours} hours, ${minutes} minutes, and ${seconds} seconds`}</p> {/* ☆ TODO prettify countdown */}
+      <p className="wotd-countdown">{`next word in ${hours} hours, ${minutes} minutes, and ${seconds} seconds`} </p> {/* ☆ TODO prettify countdown */}
+      
     </div>
   );
 }

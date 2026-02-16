@@ -2,11 +2,11 @@ function Home() {
   return (
     <div className="home">
       <section className="intro">
-        <h1>welcome to noia</h1>
+        <h1>Welcome to Noia</h1>
       </section> 
       <section className="slogan">
-        <h1>get inpsired today!</h1>
-        <h2>a webapp for the creatives, intellectuals, homework-romanticizers, Notion users, NYT players, and my fellow 'procrastiworkers' {'\u003C'}3</h2>
+        <h1>Get inpsired today!</h1>
+        <h2>A webapp for the creatives, intellectuals, homework-romanticizers, Notion users, NYT players, and my fellow 'procrastiworkers' {'\u003C'}3</h2>
         <br/>
         <p>did you know?</p>
         <p>an apple a day keeps the doctor away...</p> 
